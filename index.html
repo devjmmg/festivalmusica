@@ -20,7 +20,7 @@
         <div class="contenedor contenido-header">
             
             <h1>Techno & EDM Festival</h1>
-            
+
             <nav class="navegacion-principal">
                 <a href="#lineup">Line Up</a>
                 <a href="#galeria">Galería</a>
@@ -47,7 +47,13 @@
     
     <section class="sobre-festival">
         <div class="imagen">
-            <img src="src/img/imagen_dj.jpg" alt="Sobre Festival">
+
+            <picture>
+                <source srcset="build/img/imagen_dj.avif" type="image/avif">
+                <source srcset="build/img/imagen_dj.webp" type="image/webp">
+                <img loading="lazy" width="250" height="180" src="build/img/imagen_dj.jpg" alt="Imagen DJ">
+            </picture>
+
         </div>
         <div class="contenido-festival">
             <h2>Techno & EDM Festival</h2>
