@@ -1,0 +1,61 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.header {
+    background-color: v.$verde;
+    padding: 2rem 0;
+    
+    @include m.tablet {
+        &.fixed {
+            position: fixed; /* Añadido para hacer que el header quede fijo */
+            top: 0; /* Añadido para alinear el header con la parte superior */
+            left: 0; /* Añadido para alinear el header con el borde izquierdo */
+            width: 100%; /* Añadido para que el header ocupe todo el ancho de la pantalla */
+            z-index: 1000; /* Añadido para asegurar que el header esté por encima de otros elementos */
+            box-shadow: .1rem .2rem .3rem #000;
+        }
+    }
+    
+    h1 {
+        color: v.$blanco;
+        text-align: center;
+        
+        @include m.tablet {
+            margin: 0;
+            text-align: left;
+        }
+    } 
+    
+    .contenido-header {
+        
+        @include m.tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+    }
+}
+
+.navegacion-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    
+    @include m.tablet {
+        flex-direction: row;
+    }
+    
+    a {
+        color: v.$blanco;
+        font-size: 2rem;
+        
+        &:hover, 
+        &.active {
+            color: v.$amarillo; 
+        }
+        
+    }
+
+}
